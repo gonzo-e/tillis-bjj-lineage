@@ -51,8 +51,8 @@
     position:relative;min-height:100svh;display:flex;flex-direction:column;
     justify-content:center;overflow:hidden;padding:0 22px;border-bottom:1px solid #2a2419;
   }
-  .hero-bg{position:absolute;inset:0;z-index:0;background-image:var(--hero-photo);background-size:cover;background-position:center 28%;background-repeat:no-repeat}
-  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,13,.80) 0%,rgba(20,17,13,.58) 28%,rgba(20,17,13,.62) 55%,rgba(20,17,13,.96) 100%)}
+  .hero-bg{position:absolute;inset:0;z-index:0;background-image:var(--hero-photo);background-size:cover;background-position:center 28%;background-repeat:no-repeat;opacity:.5}
+  .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,17,13,.5) 0%,rgba(20,17,13,.3) 30%,rgba(20,17,13,.34) 55%,rgba(20,17,13,.9) 100%)}
   .hero-logo{position:relative;z-index:2;width:clamp(160px,44vw,244px);aspect-ratio:1/1;
     background-image:var(--logo);background-repeat:no-repeat;background-position:center;background-size:contain;
     margin-bottom:30px;will-change:transform,opacity;
@@ -218,6 +218,7 @@
 <!-- ===================== HERO ===================== -->
 <header class="hero">
   <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-logo" id="wolf" role="img" aria-label="Tillis Brazilian Jiu-Jitsu logo"></div>
     <span class="label">Tillis Brazilian Jiu-Jitsu · Whittier, CA</span>
